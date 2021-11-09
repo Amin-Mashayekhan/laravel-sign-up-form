@@ -33,6 +33,7 @@ Then start your server:
 php artisan serve
 ```
 
-test the introdruser link with adding "?introducer_id=1" as the "get" parameter to your project url path:
+test the introdruser link with adding "?introducer_id=1" as the "get" parameter to your project url path for example:
+http://localhost:8000/?introducer_id=1
 
 
