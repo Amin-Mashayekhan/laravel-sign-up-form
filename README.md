@@ -33,6 +33,3 @@ php artisan serve
 
 test the introdruser link with adding "?introducer_id=1" as the "get" parameter to your project url path for example:
 http://localhost:8000/?introducer_id=1
-
-Notice: I created and almost prepared the "SignUpRequest" as the form validation class but there was not enough time to use it in my controller
-

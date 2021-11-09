@@ -102,7 +102,7 @@
                     <label>
                         <p class="mb-1">رمز عبور: <span class="text-danger">*</span></p>
                     </label>
-                        <input class="form-control" type="password" name="password" placeholder="رمز عبور" value="{{ old('password') }}">
+                        <input class="form-control" type="password" name="password" placeholder="رمز عبور" value="">
                         @error('password')
                         <span class="text-danger feedback">
                             <strong>{{ $message }}</strong>

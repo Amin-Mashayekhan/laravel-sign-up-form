@@ -44,7 +44,7 @@ class UserController extends Controller
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'user_image' => $image,
-            'age' => $request->imaage,
+            'age' => $request->age,
             'introducer_id' => $request->introducer_id,
             'password' => Hash::make($request->password),
         ]); 
