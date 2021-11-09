@@ -21,8 +21,8 @@ class UserController extends Controller
             } else{
                 CommonHelpers::newFeedback('لینک معرف معتبر نمی باشد', '.', 'error');
             }
-        } else{
-            Session::flush();
+        } elseif(Session::get('introducer_id')){
+            Session::flash('introducer_id', null);
         }
         return view('User.sign-up');
     }
