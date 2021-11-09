@@ -19,7 +19,7 @@ class UserController extends Controller
             if (User::find($request->introducer_id)) {
                 Session::put('introducer_id', $request->introducer_id);
             } else{
-                CommonHelpers::newFeedback('لینک معرف معتبر نمی باشد', '.', 'error');
+                CommonHelpers::newFeedback('', 'لینک معرف معتبر نمی باشد', 'error');
             }
         } elseif(Session::get('introducer_id')){
             Session::flash('introducer_id', null);
@@ -27,28 +27,18 @@ class UserController extends Controller
         return view('User.sign-up');
     }
 
-
-
-    // public function signUpStore(SignUpRequest $request) 
-    // above request class created and almost prepared but there was not enough time to use it
-    public function signUpStore(Request $request)
+    
+    public function signUpStore(SignUpRequest $request) 
     {
         $image = null;
         if ($request->user_image) {
             if (is_object($request->user_image)) {
                 $image = FileUploader::move($request->user_image, 'User/Image/');
             } else {
-                CommonHelpers::newFeedback('مشکلی پیش آمده است.', 'فایل ارسال شده نامعتبر', 'error');
+                CommonHelpers::newFeedback('', 'فایل ارسال شده نامعتبر', 'error');
                 return back();
             }
         } 
-        if ($request->introducer_id) {
-            $introducer = User::find($request->introducer_id);
-            if (!$introducer) {
-                CommonHelpers::newFeedback('مشکلی پیش آمده است.', 'معرف معتبر نمی باشد.', 'error');
-                return back();
-            }
-        }  
         $result = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -61,7 +51,7 @@ class UserController extends Controller
         if ($result) {
             CommonHelpers::newFeedback();
         } else{
-            CommonHelpers::newFeedback('مشکلی پیش آمده است.','','error');
+            CommonHelpers::newFeedback('', 'مشکلی پیش آمده است.','error');
         }
         return back();
     }
