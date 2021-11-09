@@ -37,7 +37,6 @@
                     </label>
                         <input class="form-control" type="text" name="name" placeholder="نام و نام خانوادگی" value="{{ old('name') }}" required>
                         @error('name')
-                            اینجا مورد داره
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -51,7 +50,6 @@
                     </label>
                         <input class="form-control" type="text" name="email" placeholder="ایمیل" value="{{ old('email') }}" required>
                         @error('email')
-                            اینجا مورد داره
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -66,7 +64,6 @@
                         <input class="form-control" type="text" name="phone_number" placeholder="شماره تلفن همراه" value="{{ old('phone_number') }}" required>
 
                         @error('phone_number')
-                            اینجا مورد داره
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -80,7 +77,6 @@
                     </label>
                         <input class="form-control" type="text" name="age" placeholder="سن" value="{{ old('age') }}">
                         @error('age')
-                            اینجا مورد داره
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -97,7 +93,6 @@
 
 
                         @error('introducer_id')
-                            اینجا مورد داره
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -111,7 +106,6 @@
                     </label>
                         <input class="form-control" type="password" name="password" placeholder="رمز عبور" value="{{ old('password') }}">
                         @error('password')
-                            اینجا مورد داره
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
