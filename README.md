@@ -18,7 +18,7 @@ Run the following command to generate your app key:
 php artisan key:generate
 ```
 
-Run the following complete the database's tables:
+Run the following command to complete the database's tables:
 
 ```
 php artisan migrate
