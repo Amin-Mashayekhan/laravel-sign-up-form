@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    font-family: digikala;
+}
+
+input, button {
+    font-family: Vazir;
+}
+
+body, html {
+    font-family: Vazir !important;
+    direction: rtl;
+}
+
+body {
+    background: #eaecef;
+    color: #636e72;
+}
+
+.color-636e72 {
+    color: #636e72;
+}
+
+a, a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: #444;
+}
+
+ul li {
+    list-style: none;
+}
+
+a, span {
+    display: inline-block;
+}
+
+.border-radius-40 {
+    border-radius: 40px;
+}
+
+.btn {
+    padding: 7px 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    font-weight: 500;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: #46b2f0 !important;
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background-color: #259ee3 !important;
+    transition: background-color 200ms;
+}
+
+
+.profile__info {
+    width: 122px;
+    height: 122px;
+    cursor: pointer;
+    margin: 15px auto 50px;
+    border-radius: 50%;
+}
+
+.profile__info input {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    z-index: 323;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar__img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.avatar__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile__name {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    margin-right: -6px;
+}
+
+.box__camera.default__avatar {
+    top: 76% !important;
+}
+
+.profile__info:hover .box__camera {
+    top: 0 !important;
+    height: 100% !important;
+}
+
+.profile__info:hover .box__camera::before {
+    top: 50%;
+}
+
+.profile__info .box__camera {
+    background: rgba(14, 14, 14, .42);
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    top: 100%;
+    width: 100%;
+    -webkit-transition: top .3s;
+    transition: top .3s;
+    z-index: 1;
+    right: 0;
+}
+
+.box__camera::before {
+    content: '';
+    background: url(../img/camera.svg) no-repeat 50%;
+    background-size: auto;
+    background-size: auto;
+    background-size: cover;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 40.5%;
+    top: 3px;
+    z-index: 2
+}
+
+
+.box__title{
+    background: #f9f9f9;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 15px 30px;
+}
+.title__row {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-content{
+    padding: 30px;
+}
+
+
+.rules{
+    font-size: 13.4px;
+}
+
+
+.jq-toast-single , .jq-toast-single * {
+    font-family   : Vazir !important;
+    text-align: right !important;
+}
+
+
+.close-jq-toast-single {
+    right: unset;
+    left    : 7px;
+}
