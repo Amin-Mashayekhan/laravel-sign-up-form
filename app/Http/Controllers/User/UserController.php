@@ -35,7 +35,7 @@ class UserController extends Controller
             if (is_object($request->user_image)) {
                 $image = FileUploader::move($request->user_image, 'User/Image/');
             } else {
-                CommonHelpers::newFeedback('', 'فایل ارسال شده نامعتبر', 'error');
+                CommonHelpers::newFeedback('', 'فایل ارسال شده معتبر نمی باشد.', 'error');
                 return back();
             }
         } 
