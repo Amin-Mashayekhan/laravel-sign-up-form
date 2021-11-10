@@ -20,9 +20,12 @@ class UserController extends Controller
                 Session::put('introducer_id', $request->introducer_id);
             } else{
                 CommonHelpers::newFeedback('', 'لینک معرف معتبر نمی باشد', 'error');
+                if (Session::has('introducer_id')) {
+                    Session::forget('introducer_id');
+                }
             }
-        } elseif(Session::get('introducer_id')){
-            Session::flash('introducer_id', null);
+        } elseif (Session::has('introducer_id')) {
+            Session::forget('introducer_id');
         }
         return view('User.sign-up');
     }
