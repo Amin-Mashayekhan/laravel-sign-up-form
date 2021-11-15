@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
-    public function signUpShow(Request $request)
+    public function signUpShow($introducer_id = null)
     {
-        if ($request->introducer_id) {
-            if (User::find($request->introducer_id)) {
-                Session::put('introducer_id', $request->introducer_id);
+        dd($introducer_id, 'hi');
+        if ($introducer_id) {
+            if (User::find($introducer_id)) {
+                Session::put('introducer_id', $introducer_id);
             } else{
                 CommonHelpers::newFeedback('', 'لینک معرف معتبر نمی باشد', 'error');
                 if (Session::has('introducer_id')) {
@@ -27,7 +28,8 @@ class UserController extends Controller
         } elseif (Session::has('introducer_id')) {
             Session::forget('introducer_id');
         }
-        return view('User.sign-up');
+        $users = User::select('id', 'introducer_id', 'created_at')->get();
+        return view('User.sign-up', compact('users'));
     }
 
     
@@ -36,7 +38,7 @@ class UserController extends Controller
         $image = null;
         if ($request->user_image) {
             if (is_object($request->user_image)) {
-                $image = FileUploader::move($request->user_image, 'User/Image/');
+                $image = FileUploader::move($request->user_image, 'User/Image');
             } else {
                 CommonHelpers::newFeedback('', 'فایل ارسال شده معتبر نمی باشد.', 'error');
                 return back();

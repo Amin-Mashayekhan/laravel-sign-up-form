@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [UserController::class, 'signUpShow'])->name('user.singUp.show');
+Route::get('/{introducer_id?}', [UserController::class, 'signUpShow'])->name('user.singUp.show');
 Route::post('/signUp', [UserController::class, 'signUpStore'])->name('user.singUp.store');
