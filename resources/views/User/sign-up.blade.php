@@ -131,7 +131,7 @@
                 @if (Session::get('introducer_id'))
                 <a href="/" class="text-primary ms-4 d-inline-block">با کد معرف ثبت نام کنید!</a>
                 @else
-                <a href="{{ asset('') }}/1" class="text-primary ms-4 d-inline-block">با لینک معرف ثبت نام کنید!</a>
+                <a href="{{ asset('') }}1" class="text-primary ms-4 d-inline-block">با لینک معرف ثبت نام کنید!</a>
                 @endif
             </form>
         </div>
