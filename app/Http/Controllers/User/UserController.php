@@ -15,7 +15,7 @@ class UserController extends Controller
 {
     public function signUpShow($introducer_id = null)
     {
-        dd($introducer_id, 'hi');
+        // dd($introducer_id, 'hi');
         if ($introducer_id) {
             if (User::find($introducer_id)) {
                 Session::put('introducer_id', $introducer_id);

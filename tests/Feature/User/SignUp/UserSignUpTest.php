@@ -30,9 +30,13 @@ class UserSignUpTest extends TestCase
 
     public function test_introducer_link_works_properly()
     {
+        $server = $this->prepareCookiesForRequest();
+
         // $this->call('GET', '/?introducer_id=1', ["test" => "test"]);
-        $response = $this->call(route('user.singUp.show', '1'),'2','2');
+        // $response = $this->call('GET', '/1/', '1');
         // $response->asser
+        // $this->get(route('user.singUp.show', '1'));
+        // $this->visit('/', 1);
         // $this->get(route('user.singUp.show', ['introducer_id' => 1, 'hello' => 'hi']) . '?pay_type=payment_gateway');
     }
 
